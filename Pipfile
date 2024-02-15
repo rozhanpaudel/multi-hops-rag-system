@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "==1.6.1"
+datasets = "==2.10.1"
+tiktoken = "==0.5.2"
+elasticsearch = "*"
+requests = "*"
+beautifulsoup4 = "*"
+langchain = "*"
+dotenv-python= "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+index_documents = "python ./documents_indexer.py"
+start_api = "uvicorn api:app --reload --port 8080"
