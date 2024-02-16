@@ -14,10 +14,11 @@ You can also refer to the lucid chart diagram given below and you can make some 
 
 ```sh
 Python v3.8
-Elasticsearch @latest 
+Elasticsearch v8.12 
 ```
 
 ### Installation Guide
+You can run this applicaton either by installing the packages and dependencies manually or using the `Docker`,
 
 - Copy `.env-SAMPLE` to `.env` and configure the environment variables
 
@@ -26,7 +27,22 @@ To run the fast api server,
     pip install -r requirements.txt
     pipenv run start_api
 ```
+or,
+You can also run the api server container by following below steps,
+```sh
+ docker build -t multi_hop_rag .
+ docker run -d --name multi_hop_rag -p 8080:8080
+```
+Note: At default application runs at port 8080
 
+### Running the whole application
+
+You can directly run the whole application that contains both frontend and backend server using the command below,
+Go to the `root` directory,
+```sh
+    docker-compose up
+```
+Note: You can access the frontend at port 3000 and api server at port 8080.
 
 ### Guideline for Indexing Documents
 prerequisites: Before running the script, create folders inside `./documents` and add pdf files that you want to index inside each folder.
@@ -37,13 +53,6 @@ To run the indexing script,
 ```sh
 pipenv run index_documents
 ```
-
-### Create Docker Image and Run the Container
-```sh
- docker build -t multi_hop_rag .
- docker run -d --name multi_hop_rag -p 8080:8080
-```
-Note: At default application runs at port 8080
 
 ### API Documentation
 You can refer to the fast api documentation that uses openapi 3.0 at the following link

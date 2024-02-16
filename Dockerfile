@@ -1,10 +1,9 @@
 FROM python:3.8-slim
 WORKDIR /app
-COPY . /app
-RUN pip install --no-cache-dir pipenv
+COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY .env /app
+COPY .env .
 EXPOSE 8080
 
 # Run script when the container launches
-CMD ["pipenv","run","start_api"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8080"]

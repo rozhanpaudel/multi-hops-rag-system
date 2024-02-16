@@ -1,0 +1,35 @@
+# Ignore common Python and system files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.log
+*.pyc
+
+# Ignore Node.js and npm files
+node_modules
+npm-debug.log
+
+# Ignore Docker-related files
+.dockerignore
+.dockerfile
+Dockerfile*
+docker-compose.yml
+.docker
+
+# Ignore editor-specific files
+.vscode
+.idea
+
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore miscellaneous project files
+*.iml
+*.DS_Store
+
+
+client

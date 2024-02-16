@@ -3,6 +3,8 @@ You can use this single page application to chat with the Multi-hops RAG Applica
 
 ## Installation
 
+- Copy `.env.sample` to `.env` and configure the environment variables
+
 In the project directory, you can run:
 
 ### `npm start`
