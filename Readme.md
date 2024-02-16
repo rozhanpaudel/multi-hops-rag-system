@@ -13,8 +13,10 @@ You can also refer to the lucid chart diagram given below and you can make some 
 ### Requirements
 
 ```sh
-Python v3.8
-Elasticsearch v8.12 
+Python v3.8 (*)
+Elasticsearch v8.12 (*)
+Docker v25.0.3 
+docker-compose v2.24.5
 ```
 
 ### Installation Guide
