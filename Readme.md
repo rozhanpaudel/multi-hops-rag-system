@@ -4,7 +4,7 @@ Multi-hops Retrieval-augmented generation (MRAG) is a system that enhances large
 #### System Architecutre
 ![Multi-hops RAG Architecutre](./assets/architecture.png)
 That is a system architecture followed by above multi hops RAG System.
-You can find the detail explanation of architecture [here.](./assets/architecture_explanation.pdf).
+You can find the detail explanation of architecture [here.](./assets/MRAG_Architecture_Explanation.pdf)
 
 You can also refer to the lucid chart diagram given below and you can make some comments regarding the improvement of a system.
 [Go to Lucid Chart Diagram.](https://lucid.app/lucidspark/dc2502f8-c0da-431f-a7fb-613d32f5bdae/edit?viewport_loc=-812%2C-118%2C3840%2C1862%2C0_0&invitationId=inv_55a3e945-f28f-4432-b264-70a9a6594a53)
