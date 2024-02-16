@@ -54,6 +54,11 @@ i.e. http://thisapphost.com/docs
 You will get above swagger docs for your reference after visiting the documentation url.
 
 
+### Client-Side UI (React App)
+![Multi hops RAG Chat Application](./assets/chatbot2.jpg)
+You can access the client side application made with React JS by accessing `./client` folder and by running the application.
+Also, you can find the [Readme.md for React Application](./client/readme.md) which guides you through the process to install application locally.
+
 ### Contributing
 
 Contributions are always welcome!

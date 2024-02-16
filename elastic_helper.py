@@ -56,7 +56,14 @@ class Elastic_Retrival:
             doc['vector'] = embedding_func.embed_query(str(doc['content']))
             self.index_documents_with_metadata(index_name=index, documents=[doc])
 
-       
+    def get_indices_from_elasticsearch(self):
+        try:
+            indices = self.es.indices.get_alias().keys()
+            return list(indices)
+        except Exception as e:
+            print(f"Error: {e}")
+            return []
+    
 
     def index_documents_with_metadata(self, index_name, documents):
         actions = [

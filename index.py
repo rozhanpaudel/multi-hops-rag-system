@@ -9,7 +9,6 @@ from langchain.schema import (
 from langchain_openai import OpenAIEmbeddings
 from helper import split_and_format_data
 from elastic_helper import get_elastic_retrival_obj
-from elastic_helper import indices
 
 # Fetching Environment Variables
 openai_api_key=get_environment_config('OPEN_API_KEY')
@@ -17,7 +16,6 @@ model=get_environment_config('OPEN_API_MODEL')
 
 # Fetching elastic retrival obj and indices
 elastic_retrival = get_elastic_retrival_obj()
-indices = indices()
 
 class RAGModel():
     def __init__(self,api_key,model):
@@ -55,6 +53,7 @@ class RAGModel():
         query_vector = self.embedding_function.embed_query(str(query))
 
         source_knowledge = []
+        indices = elastic_retrival.get_indices_from_elasticsearch()
         for index in indices:
             knowledge_list = elastic_retrival.search_similar_documents(query_vector=query_vector, index_name=index, top_k=2)
             for knowledge in knowledge_list:
